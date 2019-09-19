@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F35B059E-9410-4035-8B92-4622E75951F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StreamCatcherDemo</RootNamespace>
+    <AssemblyName>StreamCatcherDemo</AssemblyName>
+    <ApplicationIcon>StreamCatcherDemo.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net40\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="QCAP.NET, Version=1.0.0.119, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QCAP.NET.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationContext.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="memory.cs" />
+    <Compile Include="MyAudioInputDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyAudioInputDlg.Designer.cs">
+      <DependentUpon>MyAudioInputDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyChannelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyChannelControl.Designer.cs">
+      <DependentUpon>MyChannelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyOSDPropertyDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyOSDPropertyDlg.Designer.cs">
+      <DependentUpon>MyOSDPropertyDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyRecordingDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyRecordingDlg.Designer.cs">
+      <DependentUpon>MyRecordingDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyShareRecordingDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyShareRecordingDlg.Designer.cs">
+      <DependentUpon>MyShareRecordingDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySnapShotDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySnapShotDlg.Designer.cs">
+      <DependentUpon>MySnapShotDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyStreamingControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyStreamingControl.Designer.cs">
+      <DependentUpon>MyStreamingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyVideoInputDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyVideoInputDlg.Designer.cs">
+      <DependentUpon>MyVideoInputDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySetupControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySetupControl.Designer.cs">
+      <DependentUpon>MySetupControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyVideoPropertyDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyVideoPropertyDlg.Designer.cs">
+      <DependentUpon>MyVideoPropertyDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyAudioInputDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MyAudioInputDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyChannelControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MyChannelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyOSDPropertyDlg.resx">
+      <DependentUpon>MyOSDPropertyDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyRecordingDlg.resx">
+      <DependentUpon>MyRecordingDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyShareRecordingDlg.resx">
+      <DependentUpon>MyShareRecordingDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySnapShotDlg.resx">
+      <DependentUpon>MySnapShotDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyStreamingControl.resx">
+      <DependentUpon>MyStreamingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyVideoInputDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MyVideoInputDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySetupControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MySetupControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyVideoPropertyDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MyVideoPropertyDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StreamCatcherDemo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
